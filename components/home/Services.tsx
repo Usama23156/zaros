@@ -7,16 +7,15 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { services } from "@/lib/data/home";
 
-export default function Services() {
+export default function Services({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
-    <AnimatedSection
-      id="services"
-      className="bg-white py-20 md:py-28"
-    >
+    <AnimatedSection className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
-          <SectionHeader overline="OUR SERVICES" title="WHAT WE DO" />
-        </div>
+        {!hideHeader && (
+          <div className="mb-14">
+            <SectionHeader overline="OUR SERVICES" title="WHAT WE DO" />
+          </div>
+        )}
 
         <motion.div
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"

@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Desktop: two-column layout */}
       <div className="mx-auto grid max-w-7xl lg:grid-cols-[45%_55%]">
         {/* Content — mobile overlays video, desktop sits beside */}
@@ -63,7 +63,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.5 }}
           >
             <Button
-              href="#portfolio"
+              href="/portfolio"
               icon={<ArrowRight size={16} strokeWidth={1.5} />}
               className="max-lg:bg-white max-lg:text-zinc-900 max-lg:hover:bg-zinc-100"
             >

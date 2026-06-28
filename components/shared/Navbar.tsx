@@ -1,14 +1,21 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Button from "@/components/shared/Button";
 import Logo from "@/components/shared/Logo";
-import { navLinks } from "@/lib/data/home";
+import { navLinks } from "@/lib/data/site";
+
+function isActive(pathname: string, href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("HOME");
 
   useEffect(() => {
     if (isOpen) {
@@ -21,6 +28,10 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-100 bg-white">
       <nav
@@ -32,23 +43,22 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
+              <Link
                 href={link.href}
-                onClick={() => setActiveLink(link.label)}
                 className={`relative text-xs font-medium tracking-[0.15em] transition-colors hover:text-zinc-900 ${
-                  activeLink === link.label
+                  isActive(pathname, link.href)
                     ? "text-zinc-900 after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:bg-zinc-900"
                     : "text-zinc-600"
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="hidden lg:block">
-          <Button href="#contact">GET A QUOTE</Button>
+          <Button href="/contact">GET A QUOTE</Button>
         </div>
 
         <button
@@ -71,22 +81,18 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
-                  onClick={() => {
-                    setActiveLink(link.label);
-                    setIsOpen(false);
-                  }}
                   className={`block text-sm font-medium tracking-[0.15em] ${
-                    activeLink === link.label ? "text-zinc-900" : "text-zinc-600"
+                    isActive(pathname, link.href) ? "text-zinc-900" : "text-zinc-600"
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="pt-2">
-              <Button href="#contact" className="w-full">
+              <Button href="/contact" className="w-full">
                 GET A QUOTE
               </Button>
             </li>

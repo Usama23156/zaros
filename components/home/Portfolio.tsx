@@ -8,20 +8,30 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { projects } from "@/lib/data/home";
 
-export default function Portfolio() {
+export default function Portfolio({
+  hideHeader = false,
+  hideViewAll = false,
+}: {
+  hideHeader?: boolean;
+  hideViewAll?: boolean;
+}) {
   return (
-    <AnimatedSection id="portfolio" className="bg-zinc-50 py-20 md:py-28">
+    <AnimatedSection className="bg-zinc-50 py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-14 flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <SectionHeader
-            overline="OUR WORK"
-            title="FEATURED PROJECTS"
-            align="left"
-          />
-          <Button href="#portfolio" variant="outline" className="shrink-0">
-            VIEW ALL
-          </Button>
-        </div>
+        {!hideHeader && (
+          <div className="mb-14 flex flex-col items-center justify-between gap-6 sm:flex-row">
+            <SectionHeader
+              overline="OUR WORK"
+              title="FEATURED PROJECTS"
+              align="left"
+            />
+            {!hideViewAll && (
+              <Button href="/portfolio" variant="outline" className="shrink-0">
+                VIEW ALL
+              </Button>
+            )}
+          </div>
+        )}
 
         <motion.div
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"

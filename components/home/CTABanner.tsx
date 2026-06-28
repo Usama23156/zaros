@@ -37,7 +37,7 @@ export default function CTABanner() {
           Let us bring your vision to life with a bespoke interior design
           experience tailored exclusively to you.
         </p>
-        <Button href="#contact" className="bg-white text-zinc-900 hover:bg-zinc-100">
+        <Button href="/contact" className="bg-white text-zinc-900 hover:bg-zinc-100">
           CONTACT US
         </Button>
       </motion.div>

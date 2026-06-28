@@ -13,15 +13,6 @@ import {
   Users,
 } from "lucide-react";
 
-export const navLinks = [
-  { label: "HOME", href: "#home" },
-  { label: "ABOUT US", href: "#about" },
-  { label: "SERVICES", href: "#services" },
-  { label: "PORTFOLIO", href: "#portfolio" },
-  { label: "BLOG", href: "#blog" },
-  { label: "CONTACT", href: "#contact" },
-];
-
 export const features = [
   {
     icon: PenTool,
@@ -209,22 +200,6 @@ export const brands = [
   "Flexform",
   "Giorgetti",
 ];
-
-export const footerLinks = {
-  quickLinks: [
-    { label: "Home", href: "#home" },
-    { label: "About Us", href: "#about" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Blog", href: "#blog" },
-    { label: "Contact", href: "#contact" },
-  ],
-  services: [
-    { label: "Interior Design", href: "#services" },
-    { label: "Space Planning", href: "#services" },
-    { label: "Lighting Design", href: "#services" },
-    { label: "Renovation", href: "#services" },
-  ],
-};
 
 export const contactInfo = {
   phone: "+971 50 123 4567",

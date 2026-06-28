@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 import {
@@ -5,7 +6,8 @@ import {
   InstagramIcon,
   PinterestIcon,
 } from "@/components/shared/SocialIcons";
-import { contactInfo, footerLinks } from "@/lib/data/home";
+import { contactInfo } from "@/lib/data/home";
+import { footerLinks } from "@/lib/data/site";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,12 +31,12 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-zinc-400 transition-colors hover:text-white"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,12 +49,12 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-zinc-400 transition-colors hover:text-white"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

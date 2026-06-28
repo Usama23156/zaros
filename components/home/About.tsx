@@ -9,9 +9,15 @@ import { fadeUp, viewportOnce } from "@/lib/animations";
 const aboutImage =
   "https://images.unsplash.com/photo-1618221197210-5b2a5c0a0c0b?w=900&q=80";
 
-export default function About() {
+export default function About({
+  hideHeader = false,
+  hideCta = false,
+}: {
+  hideHeader?: boolean;
+  hideCta?: boolean;
+}) {
   return (
-    <AnimatedSection id="about" className="bg-zinc-50 py-20 md:py-28">
+    <AnimatedSection className="bg-zinc-50 py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <motion.div
           initial="hidden"
@@ -37,13 +43,17 @@ export default function About() {
           transition={{ delay: 0.15 }}
           className="flex flex-col gap-6"
         >
-          <span className="text-xs font-medium tracking-[0.25em] text-zinc-500 uppercase">
-            About Company
-          </span>
-          <h2 className="text-3xl font-bold tracking-[0.08em] text-zinc-900 uppercase md:text-4xl">
-            About ZAROS
-          </h2>
-          <div className="h-px w-12 bg-zinc-900" aria-hidden="true" />
+          {!hideHeader && (
+            <>
+              <span className="text-xs font-medium tracking-[0.25em] text-zinc-500 uppercase">
+                About Company
+              </span>
+              <h2 className="text-3xl font-bold tracking-[0.08em] text-zinc-900 uppercase md:text-4xl">
+                About ZAROS
+              </h2>
+              <div className="h-px w-12 bg-zinc-900" aria-hidden="true" />
+            </>
+          )}
           <p className="text-base leading-relaxed text-zinc-500">
             Founded with a passion for creating extraordinary living environments,
             ZAROS Interior Decoration has become a trusted name in premium design
@@ -56,11 +66,13 @@ export default function About() {
             comfort, and functionality. From concept to completion, we manage
             every detail so you can enjoy the transformation.
           </p>
-          <div>
-            <Button href="#about" variant="outline">
-              READ MORE
-            </Button>
-          </div>
+          {!hideCta && (
+            <div>
+              <Button href="/about" variant="outline">
+                READ MORE
+              </Button>
+            </div>
+          )}
         </motion.div>
       </div>
     </AnimatedSection>
