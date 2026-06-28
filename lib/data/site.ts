@@ -16,10 +16,10 @@ export const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   services: [
-    { label: "Interior Design", href: "/services" },
-    { label: "Residential Design", href: "/services" },
-    { label: "Commercial Design", href: "/services" },
-    { label: "Turnkey Solutions", href: "/services" },
+    { label: "Curtains & Blinds", href: "/services" },
+    { label: "Interior Decoration", href: "/services" },
+    { label: "Gypsum & Ceilings", href: "/services" },
+    { label: "Carpentry & Joinery", href: "/services" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

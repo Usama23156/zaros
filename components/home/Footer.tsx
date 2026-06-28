@@ -78,7 +78,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="mb-5 text-xs font-bold tracking-[0.15em] uppercase">
-              Services
+              Our Services
             </h3>
             <ul className="flex flex-col gap-2.5">
               {footerLinks.services.map((link) => (
