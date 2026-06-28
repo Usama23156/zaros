@@ -40,10 +40,10 @@ export default function OurStory() {
 
           <div>
             <Button
-              href="/portfolio"
+              href="/offers"
               icon={<ArrowRight size={16} strokeWidth={1.5} />}
             >
-              OUR PORTFOLIO
+              VIEW OFFERS
             </Button>
           </div>
         </motion.div>

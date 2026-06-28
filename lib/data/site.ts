@@ -2,7 +2,8 @@ export const navLinks = [
   { label: "HOME", href: "/" },
   { label: "ABOUT US", href: "/about" },
   { label: "SERVICES", href: "/services" },
-  { label: "PORTFOLIO", href: "/portfolio" },
+  { label: "PRODUCTS", href: "/products" },
+  { label: "OFFERS", href: "/offers" },
   { label: "BLOG", href: "/blog" },
   { label: "CONTACT", href: "/contact" },
 ] as const;
@@ -11,7 +12,8 @@ export const footerLinks = {
   quickLinks: [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Portfolio", href: "/portfolio" },
+    { label: "Products", href: "/products" },
+    { label: "Offers", href: "/offers" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
