@@ -4,59 +4,29 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { staggerContainer, staggerItem, viewportOnce } from "@/lib/animations";
 import { specialDeals } from "@/lib/data/offers";
 
-function useCountdown(endsAt: string) {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const calculate = () => {
-      const diff = new Date(endsAt).getTime() - Date.now();
-      if (diff <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      });
-    };
-
-    calculate();
-    const interval = setInterval(calculate, 1000);
-    return () => clearInterval(interval);
-  }, [endsAt]);
-
-  return timeLeft;
-}
-
-function Countdown({ endsAt }: { endsAt: string }) {
-  const { days, hours, minutes, seconds } = useCountdown(endsAt);
-
+function CountdownDisplay({
+  countdown,
+}: {
+  countdown: { days: number; hours: number; minutes: number; seconds: number };
+}) {
   const units = [
-    { value: days, label: "Days" },
-    { value: hours, label: "Hrs" },
-    { value: minutes, label: "Mins" },
-    { value: seconds, label: "Secs" },
+    { value: countdown.days, label: "Days" },
+    { value: countdown.hours, label: "Hrs" },
+    { value: countdown.minutes, label: "Mins" },
+    { value: countdown.seconds, label: "Secs" },
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-1 border border-slate-100 bg-slate-50 py-3">
+    <div className="grid grid-cols-4 divide-x divide-slate-200 border border-slate-200 bg-[#F8FAFC]">
       {units.map((unit) => (
-        <div key={unit.label} className="text-center">
-          <span className="block text-sm font-bold tabular-nums text-slate-900">
+        <div key={unit.label} className="py-2.5 text-center">
+          <span className="block text-sm font-bold tabular-nums text-[#0F172A]">
             {String(unit.value).padStart(2, "0")}
           </span>
-          <span className="text-[9px] tracking-wide text-slate-400 uppercase">
+          <span className="text-[8px] font-medium tracking-wide text-slate-400 uppercase">
             {unit.label}
           </span>
         </div>
@@ -65,41 +35,35 @@ function Countdown({ endsAt }: { endsAt: string }) {
   );
 }
 
-function DealCard({
-  badge,
-  title,
-  description,
-  image,
-  endsAt,
-}: (typeof specialDeals)[number]) {
+function DealCard({ deal }: { deal: (typeof specialDeals)[number] }) {
   return (
-    <article className="flex flex-col overflow-hidden border border-slate-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-      <div className="relative aspect-[4/3] overflow-hidden">
+    <article className="flex h-full flex-col overflow-hidden border border-slate-100 bg-white shadow-sm">
+      <div className="relative aspect-[3/4] overflow-hidden sm:aspect-[4/5]">
         <Image
-          src={image}
-          alt={title}
+          src={deal.image}
+          alt={deal.title}
           fill
           className="object-cover"
-          sizes="(max-width: 1280px) 33vw, 20vw"
+          sizes="(max-width: 1280px) 20vw, 240px"
         />
-        <span className="absolute top-3 left-3 bg-slate-900 px-2 py-1 text-[10px] font-bold tracking-[0.1em] text-white">
-          {badge}
+        <span className="absolute top-3 left-3 bg-[#0F172A] px-2 py-1 text-[9px] font-bold tracking-[0.1em] text-white">
+          {deal.badge}
         </span>
       </div>
 
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="mb-2 text-xs font-bold tracking-[0.1em] text-slate-900 uppercase">
-          {title}
+        <h3 className="mb-2 text-[11px] font-bold tracking-[0.1em] text-[#0F172A] uppercase">
+          {deal.title}
         </h3>
-        <p className="mb-4 flex-1 text-xs leading-relaxed text-slate-500">
-          {description}
+        <p className="mb-4 flex-1 text-[11px] leading-relaxed text-slate-500">
+          {deal.description}
         </p>
 
-        <Countdown endsAt={endsAt} />
+        <CountdownDisplay countdown={deal.countdown} />
 
         <Link
           href="/products"
-          className="mt-4 flex w-full items-center justify-center gap-1 bg-slate-900 py-3 text-[10px] font-semibold tracking-[0.15em] text-white uppercase transition-colors hover:bg-slate-800"
+          className="mt-4 flex w-full items-center justify-center gap-1 bg-[#0F172A] py-2.5 text-[10px] font-semibold tracking-[0.15em] text-white uppercase transition-colors hover:bg-slate-800"
         >
           Shop Now
           <ArrowRight size={12} strokeWidth={1.5} />
@@ -120,24 +84,24 @@ export default function SpecialDeals() {
           variants={staggerItem}
           className="mb-12 text-center"
         >
-          <span className="mb-2 block text-xs font-medium tracking-[0.25em] text-slate-500 uppercase">
+          <p className="mb-2 text-xs font-medium tracking-[0.25em] text-slate-500 uppercase">
             Limited Time
-          </span>
-          <h2 className="text-2xl font-bold tracking-[0.08em] text-slate-900 uppercase md:text-3xl">
+          </p>
+          <h2 className="text-2xl font-bold tracking-[0.1em] text-[#0F172A] uppercase md:text-3xl">
             Special Deals
           </h2>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+          className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5 lg:gap-5"
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
         >
           {specialDeals.map((deal) => (
-            <motion.div key={deal.id} variants={staggerItem}>
-              <DealCard {...deal} />
+            <motion.div key={deal.id} variants={staggerItem} className="h-full">
+              <DealCard deal={deal} />
             </motion.div>
           ))}
         </motion.div>

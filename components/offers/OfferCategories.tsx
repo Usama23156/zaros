@@ -8,7 +8,7 @@ import { offerCategories } from "@/lib/data/offers";
 
 export default function OfferCategories() {
   return (
-    <section className="bg-slate-50 py-16 md:py-24 lg:py-28">
+    <section className="bg-[#F8FAFC] py-16 md:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -17,13 +17,13 @@ export default function OfferCategories() {
           variants={staggerItem}
           className="mb-12 text-center"
         >
-          <h2 className="text-2xl font-bold tracking-[0.08em] text-slate-900 uppercase md:text-3xl">
+          <h2 className="text-2xl font-bold tracking-[0.1em] text-[#0F172A] uppercase md:text-3xl">
             What&apos;s On Offer?
           </h2>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+          className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6 lg:gap-5"
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -35,36 +35,36 @@ export default function OfferCategories() {
               <motion.article
                 key={category.title}
                 variants={staggerItem}
-                className="flex flex-col bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                className="flex flex-col border border-slate-100 bg-white p-4 shadow-sm transition-shadow duration-300 hover:shadow-md lg:p-5"
               >
                 <Icon
-                  size={24}
+                  size={22}
                   strokeWidth={1.5}
-                  className="mb-4 text-slate-900"
+                  className="mb-3 text-[#0F172A]"
                   aria-hidden="true"
                 />
 
-                <h3 className="mb-3 text-xs font-bold tracking-[0.1em] text-slate-900 uppercase">
+                <h3 className="mb-3 min-h-[2rem] text-[10px] font-bold leading-snug tracking-[0.08em] text-[#0F172A] uppercase lg:text-[11px]">
                   {category.title}
                 </h3>
 
-                <div className="relative mb-4 aspect-square overflow-hidden">
+                <div className="relative mb-3 aspect-square overflow-hidden bg-slate-100">
                   <Image
                     src={category.image}
                     alt={category.title}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 1280px) 33vw, 16vw"
+                    sizes="160px"
                   />
                 </div>
 
-                <p className="mb-5 flex-1 text-xs leading-relaxed text-slate-500">
+                <p className="mb-4 flex-1 text-[11px] leading-relaxed text-slate-500 lg:text-xs">
                   {category.description}
                 </p>
 
                 <Link
                   href="/products"
-                  className="text-[10px] font-bold tracking-[0.12em] text-slate-900 uppercase transition-colors hover:text-slate-600"
+                  className="text-[10px] font-bold tracking-[0.1em] text-[#0F172A] uppercase hover:text-slate-600"
                 >
                   {category.tag}
                 </Link>

@@ -11,6 +11,8 @@ import {
   Wind,
 } from "lucide-react";
 
+/** Static placeholder content — no backend. Replace manually when ready. */
+
 export const offersHeroImage =
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80";
 
@@ -43,7 +45,7 @@ export const offerCategories: {
 }[] = [
   {
     title: "Curtains & Blinds",
-    description: "Premium fabrics and custom fittings for every window style.",
+    description: "Premium fabrics and custom fittings for every window.",
     tag: "UP TO 50% OFF",
     icon: Wind,
     image:
@@ -51,7 +53,7 @@ export const offerCategories: {
   },
   {
     title: "Wall Decor",
-    description: "Panels, moldings, and art to elevate your walls with character.",
+    description: "Panels, moldings, and art to elevate your walls.",
     tag: "UP TO 40% OFF",
     icon: Square,
     image:
@@ -59,7 +61,7 @@ export const offerCategories: {
   },
   {
     title: "Flooring",
-    description: "Hardwood, parquet, and engineered surfaces built to last.",
+    description: "Hardwood, parquet, and engineered surfaces.",
     tag: "UP TO 35% OFF",
     icon: Grid3x3,
     image:
@@ -67,7 +69,7 @@ export const offerCategories: {
   },
   {
     title: "Gypsum & Ceilings",
-    description: "Architectural ceiling designs with integrated lighting solutions.",
+    description: "Architectural ceilings with integrated lighting.",
     tag: "UP TO 45% OFF",
     icon: Layers,
     image:
@@ -75,7 +77,7 @@ export const offerCategories: {
   },
   {
     title: "Paints & Finishes",
-    description: "Expert color palettes and flawless application for every surface.",
+    description: "Expert color palettes and flawless application.",
     tag: "UP TO 30% OFF",
     icon: Paintbrush,
     image:
@@ -83,7 +85,7 @@ export const offerCategories: {
   },
   {
     title: "Decor & Accessories",
-    description: "Curated vases, cushions, rugs, and pieces that complete your space.",
+    description: "Vases, cushions, rugs, and finishing pieces.",
     tag: "UP TO 55% OFF",
     icon: Sparkles,
     image:
@@ -122,25 +124,25 @@ export const specialDeals = [
     description: "Premium linen drapes with custom sizing and installation.",
     image:
       "https://images.unsplash.com/photo-1615529328331-f8917597711f?w=500&q=80",
-    endsAt: "2026-12-31T23:59:59",
+    countdown: { days: 2, hours: 14, minutes: 36, seconds: 45 },
   },
   {
     id: "oak-flooring",
     badge: "40% OFF",
     title: "Oak Parquet Flooring",
-    description: "Solid oak parquet panels with professional fitting included.",
+    description: "Solid oak parquet panels with professional fitting.",
     image:
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=80",
-    endsAt: "2026-11-30T23:59:59",
+    countdown: { days: 5, hours: 8, minutes: 22, seconds: 10 },
   },
   {
     id: "wall-panels",
     badge: "35% OFF",
     title: "Wall Panel Set",
-    description: "Decorative wall panels with premium finish and easy install.",
+    description: "Decorative panels with premium finish and easy install.",
     image:
       "https://images.unsplash.com/photo-1618221197210-5b2a5c0a0c0b?w=500&q=80",
-    endsAt: "2026-10-15T23:59:59",
+    countdown: { days: 3, hours: 6, minutes: 15, seconds: 30 },
   },
   {
     id: "pendant-lights",
@@ -149,7 +151,7 @@ export const specialDeals = [
     description: "Designer pendant lights for dining and living spaces.",
     image:
       "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=500&q=80",
-    endsAt: "2026-09-20T23:59:59",
+    countdown: { days: 1, hours: 12, minutes: 48, seconds: 55 },
   },
   {
     id: "decor-bundle",
@@ -158,6 +160,6 @@ export const specialDeals = [
     description: "Curated vases, cushions, and accessories for any room.",
     image:
       "https://images.unsplash.com/photo-1600121848594-a78687414566?w=500&q=80",
-    endsAt: "2026-08-31T23:59:59",
+    countdown: { days: 7, hours: 3, minutes: 20, seconds: 18 },
   },
 ];

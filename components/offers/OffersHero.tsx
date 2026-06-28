@@ -10,7 +10,7 @@ import { offersHeroImage } from "@/lib/data/offers";
 export default function OffersHero() {
   return (
     <section className="bg-white py-16 md:py-24 lg:py-28">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -22,13 +22,13 @@ export default function OffersHero() {
             Our Offers
           </span>
 
-          <h1 className="text-3xl font-bold tracking-[0.06em] text-slate-900 uppercase sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+          <h1 className="text-3xl font-bold tracking-[0.05em] text-[#0F172A] uppercase sm:text-4xl lg:text-5xl lg:leading-[1.15]">
             Premium Spaces
             <br />
             Better Prices
           </h1>
 
-          <p className="max-w-lg text-base leading-relaxed text-slate-500">
+          <p className="max-w-md text-base leading-relaxed text-slate-500">
             Exclusive offers on premium interior solutions — from curtains and
             flooring to complete decor packages. Transform your space for less
             without compromising on quality.
@@ -38,7 +38,7 @@ export default function OffersHero() {
             <Button
               href="#special-deals"
               icon={<ArrowRight size={16} strokeWidth={1.5} />}
-              className="bg-slate-900 hover:bg-slate-800 focus-visible:outline-slate-900"
+              className="bg-[#0F172A] hover:bg-slate-800 focus-visible:outline-[#0F172A]"
             >
               VIEW ALL OFFERS
             </Button>
@@ -62,11 +62,11 @@ export default function OffersHero() {
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
 
-          <div className="absolute right-6 bottom-6 flex h-32 w-32 flex-col items-center justify-center rounded-full bg-slate-900 p-4 text-center shadow-lg sm:right-8 sm:bottom-8 sm:h-36 sm:w-36">
-            <span className="text-lg font-bold leading-tight text-white sm:text-xl">
+          <div className="absolute right-5 bottom-5 flex h-[7.5rem] w-[7.5rem] flex-col items-center justify-center rounded-full bg-[#0F172A] p-3 text-center sm:right-8 sm:bottom-8 sm:h-[8.5rem] sm:w-[8.5rem]">
+            <span className="text-base font-bold leading-none text-white sm:text-lg">
               UP TO 70%
             </span>
-            <span className="mt-1 text-[9px] leading-tight font-medium tracking-wide text-white/90 uppercase sm:text-[10px]">
+            <span className="mt-1.5 max-w-[90px] text-[8px] leading-tight font-medium tracking-wide text-white/90 uppercase sm:text-[9px]">
               OFF ON SELECTED ITEMS
             </span>
           </div>
