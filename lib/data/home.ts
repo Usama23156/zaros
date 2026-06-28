@@ -204,7 +204,7 @@ export const brands = [
 export const contactInfo = {
   phone: "+971 50 123 4567",
   email: "info@zarosinterior.com",
-  address: "Dubai Design District, Building 7, Dubai, UAE",
+  address: "Office 101, Al Quoz, Dubai, UAE",
 };
 
 export const heroFallbackImage =

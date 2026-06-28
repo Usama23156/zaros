@@ -17,8 +17,12 @@ export const footerLinks = {
   ],
   services: [
     { label: "Interior Design", href: "/services" },
-    { label: "Space Planning", href: "/services" },
-    { label: "Lighting Design", href: "/services" },
-    { label: "Renovation", href: "/services" },
+    { label: "Residential Design", href: "/services" },
+    { label: "Commercial Design", href: "/services" },
+    { label: "Turnkey Solutions", href: "/services" },
+  ],
+  legal: [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms & Conditions", href: "/terms" },
   ],
 };
