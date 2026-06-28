@@ -88,6 +88,11 @@ export default function ProductsGrid() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
+                {product.onSale && (
+                  <span className="absolute top-3 left-3 bg-slate-900 px-2 py-1 text-[10px] font-bold tracking-[0.1em] text-white">
+                    SALE
+                  </span>
+                )}
               </div>
               <div className="flex flex-1 flex-col p-5">
                 <span className="mb-1 text-[10px] font-medium tracking-[0.15em] text-slate-400 uppercase">
@@ -96,9 +101,22 @@ export default function ProductsGrid() {
                 <h3 className="mb-2 text-sm font-bold tracking-[0.06em] text-slate-900 uppercase">
                   {product.name}
                 </h3>
-                <p className="mb-4 text-base font-semibold text-slate-900">
-                  {product.price}
-                </p>
+                <div className="mb-4 flex items-baseline gap-2">
+                  {product.onSale && product.salePrice ? (
+                    <>
+                      <span className="text-base font-semibold text-slate-900">
+                        {product.salePrice}
+                      </span>
+                      <span className="text-sm text-slate-400 line-through">
+                        {product.price}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-base font-semibold text-slate-900">
+                      {product.price}
+                    </span>
+                  )}
+                </div>
                 <Link
                   href="/contact"
                   className="mt-auto text-xs font-semibold tracking-[0.15em] text-slate-900 uppercase transition-colors hover:text-slate-600"
