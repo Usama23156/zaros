@@ -63,11 +63,11 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.5 }}
           >
             <Button
-              href="/portfolio"
+              href="/offers"
               icon={<ArrowRight size={16} strokeWidth={1.5} />}
               className="max-lg:bg-white max-lg:text-zinc-900 max-lg:hover:bg-zinc-100"
             >
-              EXPLORE OUR WORK
+              EXPLORE OUR OFFERS
             </Button>
           </motion.div>
         </div>

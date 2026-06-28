@@ -26,7 +26,7 @@ export default function Portfolio({
               align="left"
             />
             {!hideViewAll && (
-              <Button href="/portfolio" variant="outline" className="shrink-0">
+              <Button href="/offers" variant="outline" className="shrink-0">
                 VIEW ALL
               </Button>
             )}
