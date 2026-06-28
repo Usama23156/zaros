@@ -18,32 +18,29 @@ export default function OffersHero() {
           variants={fadeUp}
           className="flex flex-col gap-6"
         >
-          <div className="flex flex-col gap-3">
-            <div className="h-px w-8 bg-slate-900" aria-hidden="true" />
-            <span className="text-xs font-medium tracking-[0.25em] text-slate-500 uppercase">
-              Exclusive Offers
-            </span>
-          </div>
+          <span className="text-xs font-medium tracking-[0.25em] text-slate-500 uppercase">
+            Our Offers
+          </span>
 
           <h1 className="text-3xl font-bold tracking-[0.06em] text-slate-900 uppercase sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
-            Premium Packages
+            Premium Spaces
             <br />
-            At Exceptional Value
+            Better Prices
           </h1>
 
           <p className="max-w-lg text-base leading-relaxed text-slate-500">
-            Discover our curated design packages and seasonal promotions — crafted
-            to deliver luxury interiors at exclusive rates without compromising
-            on quality or craftsmanship.
+            Exclusive offers on premium interior solutions — from curtains and
+            flooring to complete decor packages. Transform your space for less
+            without compromising on quality.
           </p>
 
           <div>
             <Button
-              href="/contact"
+              href="#special-deals"
               icon={<ArrowRight size={16} strokeWidth={1.5} />}
               className="bg-slate-900 hover:bg-slate-800 focus-visible:outline-slate-900"
             >
-              CLAIM AN OFFER
+              VIEW ALL OFFERS
             </Button>
           </div>
         </motion.div>
@@ -58,12 +55,21 @@ export default function OffersHero() {
         >
           <Image
             src={offersHeroImage}
-            alt="Luxury interior design showcase"
+            alt="Modern living room interior"
             fill
             priority
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
+
+          <div className="absolute right-6 bottom-6 flex h-32 w-32 flex-col items-center justify-center rounded-full bg-slate-900 p-4 text-center shadow-lg sm:right-8 sm:bottom-8 sm:h-36 sm:w-36">
+            <span className="text-lg font-bold leading-tight text-white sm:text-xl">
+              UP TO 70%
+            </span>
+            <span className="mt-1 text-[9px] leading-tight font-medium tracking-wide text-white/90 uppercase sm:text-[10px]">
+              OFF ON SELECTED ITEMS
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>

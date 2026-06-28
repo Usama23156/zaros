@@ -75,13 +75,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Our Offers */}
           <div>
             <h3 className="mb-5 text-xs font-bold tracking-[0.15em] uppercase">
-              Our Services
+              Our Offers
             </h3>
             <ul className="flex flex-col gap-2.5">
-              {footerLinks.services.map((link) => (
+              {footerLinks.offers.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -131,7 +131,7 @@ export default function Footer() {
                 Newsletter
               </h3>
               <p className="mb-4 text-sm text-zinc-400">
-                Subscribe for design inspiration and updates.
+                Stay updated with our latest offers.
               </p>
               <form
                 className="flex border border-zinc-700"
