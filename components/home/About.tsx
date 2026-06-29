@@ -24,7 +24,7 @@ export default function About({
           whileInView="visible"
           viewport={viewportOnce}
           variants={fadeUp}
-          className="relative aspect-[4/5] overflow-hidden"
+          className="relative aspect-4/5 overflow-hidden"
         >
           <Image
             src={aboutImage}

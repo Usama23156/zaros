@@ -20,7 +20,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="flex flex-col gap-5">
-            <Logo variant="light" />
+            <div className="">
+            <Logo />
+            </div>
             <p className="max-w-xs text-sm leading-relaxed text-zinc-400">
               Premium interior decoration studio crafting bespoke spaces that
               inspire, comfort, and endure across the UAE.
