@@ -33,7 +33,7 @@ export default function Hero() {
             preload='metadata'
             className='w-full h-full object-cover ' />
             <div className="absolute top-[75%] left-[50%]   w-full h-full translate-y-[-50%] translate-x-[-50%]">  
-         <div className="flex flex-col justify-center opacity-85 items-center py-9   rounded-full   ">
+         <div className="flex flex-col justify-center opacity-85 items-center py-9 text-center px-5   ">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
