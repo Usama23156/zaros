@@ -38,7 +38,7 @@ export default function Services({ hideHeader = false }: { hideHeader?: boolean 
                   className="mb-6 text-zinc-900"
                   aria-hidden="true"
                 />
-                <h3 className="mb-3 text-sm font-bold tracking-[0.1em] text-zinc-900 uppercase">
+                <h3 className="mb-3 text-sm font-bold tracking-widest text-zinc-900 uppercase">
                   {service.title}
                 </h3>
                 <p className="mb-8 flex-1 text-sm leading-relaxed text-zinc-500">

@@ -9,7 +9,7 @@ import { contactInfo } from "@/lib/data/home";
 export default function TopBar() {
   return (
     <div className="bg-zinc-900 text-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
+      <div className="mx-auto flex  items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
           <a
             href="https://instagram.com"

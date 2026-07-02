@@ -44,7 +44,7 @@ export default function Portfolio({
             <motion.article
               key={project.title}
               variants={staggerItem}
-              className="group relative aspect-[4/3] overflow-hidden"
+              className="group relative aspect-4/3 overflow-hidden"
             >
               <Image
                 src={project.image}
@@ -55,10 +55,10 @@ export default function Portfolio({
               />
               <div className="absolute inset-0 bg-zinc-900/0 transition-colors duration-500 group-hover:bg-zinc-900/60" />
               <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                <span className="mb-1 text-xs tracking-[0.2em] text-zinc-300 uppercase">
+                <span className="mb-1 font-bold text-lg tracking-[0.2em] text-zinc-300 uppercase">
                   {project.category}
                 </span>
-                <h3 className="text-lg font-bold tracking-[0.06em] text-white uppercase">
+                <h3 className="  text-xs tracking-[0.06em] text-white uppercase">
                   {project.title}
                 </h3>
               </div>

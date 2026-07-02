@@ -25,7 +25,7 @@ export default function Hero() {
       {/* Desktop: two-column layout */}
       
       <div className="w-full h-[120vh] relative sm:h-screen">
-        <div className="w-full relative top-0 left-0 h-full">
+        <div className="w-full relative top-0 left-0 h-full " >
           <video src="/videos/hero.mp4"
             autoPlay
             muted

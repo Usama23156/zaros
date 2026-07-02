@@ -27,7 +27,7 @@ export default function Brands() {
               variants={staggerItem}
               className="flex items-center justify-center"
             >
-              <span className="text-sm font-semibold tracking-[0.15em] text-zinc-300 uppercase transition-colors duration-300 hover:text-zinc-600">
+              <span className="text-sm font-semibold tracking-[0.15em] text-zinc-800 uppercase transition-colors duration-300 hover:text-zinc-600">
                 {brand}
               </span>
             </motion.div>

@@ -42,7 +42,7 @@ export default function Process() {
                   {step.step}
                 </span>
               </div>
-              <h3 className="mb-2 text-sm font-bold tracking-[0.1em] text-zinc-900 uppercase">
+              <h3 className="mb-2 text-sm font-bold tracking-widest text-zinc-900 uppercase">
                 {step.title}
               </h3>
               <p className="text-sm leading-relaxed text-zinc-500">

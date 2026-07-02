@@ -6,8 +6,7 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import Button from "@/components/shared/Button";
 import { fadeUp, viewportOnce } from "@/lib/animations";
 
-const aboutImage =
-  "https://images.unsplash.com/photo-1618221197210-5b2a5c0a0c0b?w=900&q=80";
+
 
 export default function About({
   hideHeader = false,
@@ -27,10 +26,10 @@ export default function About({
           className="relative aspect-4/5 overflow-hidden"
         >
           <Image
-            src={aboutImage}
+            src="/about-home.jpeg"
             alt="ZAROS interior design studio workspace"
             fill
-            className="object-cover"
+            className="object-cover mask-[linear-gradient(to_bottom,blue_50%,transparent)] md:mask-[linear-gradient(to_right,blue_70%,transparent)]"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </motion.div>

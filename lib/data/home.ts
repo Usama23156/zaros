@@ -92,40 +92,40 @@ export const whyChooseUs = [
 
 export const projects = [
   {
-    title: "Modern Villa Retreat",
-    category: "Residential",
+    title: "TV units with elegant architectural details",
+    category: "TV Units",
     image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+      "/TVunits.jpeg",
   },
   {
-    title: "Urban Loft Living",
-    category: "Residential",
+    title: "Custom wardrobe solutions designed for organization and elegance.",
+    category: "Walk-in Closets & Wardrobes",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
+      "/Walk-inClosets&Wardrobes.jpeg",
   },
   {
-    title: "Executive Office Suite",
-    category: "Commercial",
+    title: "Modern bedroom interiors designed for comfort and luxury.",
+    category: "Bedrooms & Interior Design",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+      "/Bedrooms&InteriorDesign.jpeg",
   },
   {
-    title: "Luxury Penthouse",
-    category: "Residential",
+    title: "Modern kitchens designed for beauty and functionality.",
+    category: "Kitchens & Cabinetry",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "/Kitchens&Cabinetry.jpeg",
   },
   {
-    title: "Boutique Hotel Lobby",
-    category: "Hospitality",
+    title: "Comfortable sofas crafted with premium upholstery materials.",
+    category: "Sofas & Upholstery",
     image:
-      "https://images.unsplash.com/photo-1618221197210-5b2a5c0a0c0b?w=800&q=80",
+      "/Sofas&Upholstery.jpeg",
   },
   {
-    title: "Minimalist Kitchen",
-    category: "Residential",
+    title: "Luxury curtains with elegant finishes and premium fabrics.",
+    category: "Curtains",
     image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80",
+      "/Curtains.jpeg",
   },
 ];
 
@@ -163,10 +163,10 @@ export const processSteps = [
 ];
 
 export const stats = [
-  { value: "10+", label: "Years Experience" },
-  { value: "500+", label: "Projects Completed" },
-  { value: "20+", label: "Design Awards" },
-  { value: "98%", label: "Client Satisfaction" },
+  { value: "5+", label: "Years Experience" },
+  { value: "150+", label: "Projects Completed" },
+  { value: "10+", label: "Design Awards" },
+  { value: "100%", label: "Client Satisfaction" },
 ];
 
 export const testimonials = [
