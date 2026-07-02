@@ -35,6 +35,8 @@ export default function Portfolio({
 
         <motion.div
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
         >
@@ -51,8 +53,8 @@ export default function Portfolio({
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-zinc-900/0 transition-colors duration-500 group-hover:bg-zinc-900/60" />
-              <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-zinc-900/40 lg:bg-zinc-900/0 transition-colors duration-500 lg:group-hover:bg-zinc-900/60" />
+              <div className="absolute inset-0 flex flex-col justify-end p-6 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100">
                 <span className="mb-1 font-bold text-lg tracking-[0.2em] text-zinc-300 uppercase">
                   {project.category}
                 </span>
